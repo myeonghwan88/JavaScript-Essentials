@@ -504,6 +504,7 @@ console.log(amy.getFullName())
 console.log(neo.getFullName())
 */
 
+/* 
 class Vehicle {
   constructor(name, wheel) {
     this.name = name
@@ -534,3 +535,540 @@ const myCar = new Car('벤츠', 4, true)
 const daughtersCar = new Car('포르쉐', 4 , false)
 console.log(myCar)
   console.log(daughtersCar)
+*/
+
+/* 220424
+// JS데이터
+// 문자
+const result = 'Hello world!'.indexOf('cho')
+console.log(result)
+// String.prototype.indexOf()
+*/
+
+//const str = '0123'
+//console.log('01 23'.length)
+
+//const str = 'Hello world!'
+//console.log(str.indexOf('IDMASH') !== -1) // false 
+//console.log(str.slice(0,3)) //0부터 시작 ~ 3전인 2까지 노출 0,1,2 나옴
+//console.log(str.replace('world', 'IDMASH')) // 문자 치환
+
+//const str = 'idmash88@gmail.com'
+//console.log(str.match(/.+(?=@)/)[0]) //정규표현식/.+(?=@)/ 활용
+
+/*
+const str = '     Hello world   '
+console.log(str)
+console.log(str.trim())
+*/
+/*
+const pi = 3.14159265358979
+console.log(pi)
+
+const str = pi.toFixed(2)
+console.log(str)
+console.log(typeof str)
+
+const integer = parseInt(str)
+const float = parseFloat(str)
+console.log(integer)
+console.log(float)
+console.log(typeof integer, typeof float)
+*/
+/*
+console.log('abs : ', Math.abs(-12))
+
+console.log('min : ', Math.min(2, 8))
+
+console.log('max : ', Math.max(2, 8))
+
+console.log('ceil : ', Math.ceil(3.14)) // 올림
+
+console.log('floor : ', Math.floor(3.14)) // 내림
+
+console.log('round : ', Math.round(3.5)) // 반올림
+
+console.log('random : ', Math.random())
+*/
+
+/*
+const numbers =[1, 2, 3, 4] // 0번 부터 시작
+const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+*/
+//console.log(numbers[1])
+//console.log(fruits[2])
+//console.log(numbers.length)
+//console.log(fruits.length)
+//console.log([1, 2].length)
+//console.log([].length)
+
+//.concat() 원본배열이 수정되지 않은 상태에서 새로운 배열 추가
+//console.log(numbers.concat(fruits))
+//console.log(numbers)
+//console.log(fruits)
+
+//forEach() 배열데이터 만큼 반복
+//fruits.forEach(function (element, index, arry) {
+//  console.log(element, index, arry)
+//})
+
+//fruits.forEach(function (fruit, i) {
+//  console.log(fruit, i)
+//})
+
+//.map() item의 갯수 만큼 callback 함수 반환 return을 이용하여 받는다
+/*
+const a = fruits.forEach(function (fruit, index) {
+  console.log(`${fruit}-${index}`)
+})
+console.log(a)
+
+const b = fruits.map(function (fruit, index) {
+  return `${fruit}-${index}`
+})
+console.log(b)
+
+const c = fruits.map(function (fruit, index) {
+  return {
+    id : index,
+    name : fruit
+  }
+})
+console.log(c)
+*/
+/*
+const a = fruits.forEach((fruit, index) => {
+  console.log(`${fruit}-${index}`)
+})
+console.log(a)
+
+const c = fruits.map((fruit, index) => ({
+    id : index,
+    name : fruit
+  }))
+console.log(c)
+*/
+
+// .filter() true가 반환 된 값만 나온다
+//const numbers =[1, 2, 3, 4] // 0번 부터 시작
+//const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+/*
+const a = numbers.map(number => {
+  return number < 3
+})
+console.log(a)
+
+const b = numbers.filter(number => {
+  return number < 3
+})
+console.log(b)
+*/
+/*
+// 화살표 함수로 변환
+const a = numbers.map(number => number < 3)
+console.log(a)
+
+const b = numbers.filter(number => number < 3)
+console.log(b)
+
+console.log(numbers)
+*/
+/*
+const a = fruits.find(fruit => {
+  return /^C/.test(fruit) // /^B/ 정규표현식으로 ^:시작한다 C:로 시작하는 
+})
+console.log(a)
+
+const b = fruits.findIndex(fruit => {
+  return /^C/.test(fruit) // /^B/ 정규표현식으로 ^:시작한다 C:로 시작하는 
+})
+console.log(b)
+*/
+/*
+// 화살표 함수로 변환
+const a = fruits.find(fruit => /^C/.test(fruit))
+console.log(a)
+
+const b = fruits.findIndex(fruit => /^C/.test(fruit))
+console.log(b)
+*/
+
+/*
+// .includes() ()안의 값이 포함되어 있나 확인 / true / false 
+const numbers =[1, 2, 3, 4] // 0번 부터 시작
+const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+
+const a = numbers.includes(3)
+console.log(a)
+
+const b = fruits.includes('IDMASH')
+console.log(b)
+*/
+
+/*
+// .push() : 가장 뒤에 밀어넣는것  .unshift() : 가장 앞에 밀어넣는 것
+// 원본 수정됨 주의!!!
+const numbers =[1, 2, 3, 4] // 0번 부터 시작
+const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+
+numbers.push(5)
+console.log(numbers)
+
+numbers.unshift(0)
+console.log(numbers)
+*/
+/*
+// .reverse() 원본 배열을 반대로 출력
+// 원본 수정됨 주의!!!
+const numbers =[1, 2, 3, 4] // 0번 부터 시작
+const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+
+numbers.reverse()
+fruits.reverse()
+console.log(numbers)
+console.log(fruits)
+*/
+
+/*
+// .splice(index, 지울 갯수, 넣는 값) index번호에서 시작해서 총 몇개를 지워라 혹은 끼워넣어라
+// 시작되는 부분에서 끼워 넣을지 지우고 값을 바꿀지
+// 원본 수정됨 주의!!!
+const numbers =[1, 2, 3, 4] // 0번 부터 시작
+const fruits =  ['Apple', 'Banana', 'Cherry'] // element == 요소 == item
+
+numbers.splice(2, 1, 999)
+
+console.log(numbers)
+console.log(fruits)
+fruits.splice(2, 0, 'Orange')
+console.log(fruits)
+*/
+
+/*
+const userAge = {
+  // key: value
+  name: 'Idmash',
+  age: 85
+}
+const userEmail = {
+  name: 'Idmash',
+  email: 'idmash88@gmail.com'
+}
+
+// 정적메소드 assign 대상, 출처 객체 userAge에 userEmail 복사해서 넣는다
+// 참조형 데이터 : 메모리 데이터에 있는 값을 가져온다 {}, [], function
+// const target = Object.assign(userAge, userEmail)
+//console.log(target)
+//console.log(userAge)
+//console.log(target === userAge) // 같은 장소를 바라봐서 true
+
+const a = { k: 123 }
+const b = { k: 123 }
+console.log(a === b) // 다른 장소를 바라봐서 false
+
+const target = Object.assign({}, userAge, userEmail)
+// 새로운 객체 데이터를 만들어서 userAge를 건드리지 않음
+console.log(target)
+console.log(userAge)
+console.log(target === userAge) // 같은 장소를 바라봐서 true
+*/
+
+/*
+const user = {
+  name: 'Idmash',
+  age: 85,
+  email: 'idmash88@gmail.com'
+}
+
+const keys = Object.keys(user)
+console.log(keys)
+// ['name', 'age', 'email'] 이름만 빼와서 배열로 만들어주는 것
+
+console.log(user['email'])
+
+const valuse = keys.map(key => user[key])
+console.log(valuse)
+*/
+
+/*
+// 구조 분해 할당 (Destructuring assignment)
+// 비구조화 할당
+const user = {
+  name: 'Idmash',
+  age: 85,
+  email: 'idmash88@gmail.com'
+}
+
+const { name: idz, age, address = 'Korea' } = user
+// E.g user.address
+
+console.log(`사용자의 이름은 ${idz}입니다.`)
+console.log(`${idz}의 나이는 ${age} 입니다.`)
+console.log(`${idz}의 이메일 주소는 ${user.email} 입니다.`)
+console.log(address)
+console.log(user.address)
+
+const fruits =  ['Apple', 'Banana', 'Cherry']
+const [a, b, c, d] = fruits
+console.log(a, b, c, d)
+
+const [, ba] = fruits // ,넣어야함 순서 그대로 나온다.
+console.log(ba)
+*/
+
+/*
+// 전개 연산자 (Spread)
+const fruits =  ['Apple', 'Banana', 'Cherry', 'Orange']
+console.log(fruits)
+console.log(...fruits) // === console.log('Apple', 'Banana', 'Cherry')
+*/
+/*
+function toObject(a, b, ...c) { // rest parameter ...c -> 뒤에꺼는 다 C로 받는다
+  return {
+    a: a, //속성의 이름과 변수 이름이 같은 경우 하나만 남겨도 됨 a , b, c
+    b: b,
+    c: c
+  }
+}
+*/
+/*
+// 위 함수 간략화
+const toObject = (a, b, ...c) => ({a , b, c})
+console.log(toObject(...fruits)) // === console.log(toObject(fruits[0], fruits[1], fruits[2]))
+*/
+
+// 데이터 불변성(Immutability)
+// 원시 데이터: String, Number, Boolean, undefined, null 생긴게 같은면 같고 다르면 다른거
+// 참조형 데이터: Object, Arry, Function 생긴게 같아도 다른 데이터 일 수 있다
+// 원시 데이터
+//-----------------------------------------------------
+// |1: 1 / 1(c) |2: 4        |3: 7        |4: 
+//-----------------------------------------------------
+/*let a = 1
+let b = 4
+console.log(a, b, a === b)
+
+b = a
+console.log(a, b, a === b)
+
+a = 7
+console.log(a, b, a === b)
+
+let c = 1
+console.log(b, c, b === c)*/
+
+/*
+// 참조형 데이터
+//-----------------------------------------------------------------------
+// |1: { k: 1 -> k: 7 -> k: 2 -> k: 9  } |2: { k: 1           } |3: {                }
+//-----------------------------------------------------------------------
+let a = { k: 1 }
+let b = { k: 1 }
+console.log(a, b, a === b)
+
+a.k = 7
+b = a
+console.log(a, b, a === b)
+
+a.k = 2
+console.log(a, b, a === b)
+
+let c = b
+console.log(a, b, c, a === b)
+
+a.k = 9
+console.log(a, b, c, a === b)
+*/
+
+/*
+
+
+// |1:         |2:           |3:           |4: 
+// 얕은 복사(Shallow copy), 깊은 복사(Deep copy)
+import _ from 'lodash'
+
+const user = {
+  name: 'Idmash',
+  age: 85,
+  emails: ['idmash88@gmail.com']
+}
+// const copyUser = user 이렇게 되면 값이 다 바뀜
+// const copyUser = Object.assign({},user) // 대상객체, 출처객체 copyUser user 값이 각각 따로
+/* 얕은복사
+const copyUser = {...user} //Object.assign({},user) 같은 
+console.log(copyUser === user)
+
+user.age = 22 
+console.log('user', user)
+console.log('copyUser', copyUser) 
+
+console.log('------')
+console.log('------')
+
+user.emails.push('freezeid@gmail.com')
+console.log(user.emails === copyUser.emails)
+console.log('user', user)
+console.log('copyUser', copyUser) 
+*/
+/*
+// 깊은 복사
+const copyUser = _.cloneDeep(user) // _lodash의 cloneDeep의 기능을 빌려온다
+console.log(copyUser === user)
+
+user.age = 22 
+console.log('user', user)
+console.log('copyUser', copyUser) 
+
+console.log('------')
+console.log('------')
+
+user.emails.push('freezeid@gmail.com')
+console.log(user.emails === copyUser.emails)
+console.log('user', user)
+console.log('copyUser', copyUser) 
+*/
+/*
+// export default function random() { <- 이처럼 default로 나오는거는 random 이름 생략 가능
+// export function random() { <- 이처럼 default 없이 이름 있는 함수는 
+// import { random } from './getRandom' <- import 시 {} 안에 모듈 이름을 넣어주어야 사용 가능
+// 한번만 내보낸다 export default 사용, 한번 이상 내보내야한다 -> 그러면 이름있는 함수 사용
+
+import _ from 'lodash' // From `node_modules`!
+import checkType from './getType' // getType.js
+//import { random, user as idz} from './getRandom' //getRandom.js
+import * as R from './getRandom' //./getRandom 안에 있는 *(모든) 함수를 가져와서 내가 지정한 곳(R)으로 옮긴다
+
+console.log(_.camelCase('the hello world'))
+console.log(checkType([1, 2, 3]))
+//console.log(random(), random())
+//console.log(idz)
+console.log(R)
+*/
+
+import _ from 'lodash'
+/*
+const usersA = [
+  { 
+    userId: '1',
+    name: 'IDMASH'
+  },
+  {
+    userId: '2',
+    name: 'Neo'
+  }
+]
+
+const usersB = [
+  { 
+    userId: '1',
+    name: 'IDMASH'
+  },
+  {
+    userId: '3',
+    name: 'Amy'
+  }
+]
+
+const usersC = usersA.concat(usersB)
+console.log('concat', usersC)
+console.log('uniqBy', _.uniqBy(usersC, 'userId')) // 배열데이터 하나 일 때 사용
+
+const usersD = _.unionBy(usersA, usersB, 'userId') // 배열데이터 여러개 일 때 사용
+console.log('unionBy', usersD)
+*/
+
+/*
+// find / findIndex
+const users = [
+  { 
+    userId: '1',
+    name: 'IDMASH'
+  },
+  {
+    userId: '2',
+    name: 'Neo'
+  },
+  {
+    userId: '3',
+    name: 'Amy'
+  },
+  {
+    userId: '4',
+    name: 'Evan'
+  },
+  {
+    userId: '5',
+    name: 'Lewis'
+  }
+]
+
+const foundUser = _.find(users, { name: 'Amy' })
+const foundUserIndex = _.findIndex(users, { name: 'Amy' })
+console.log(foundUser)
+console.log(foundUserIndex)
+
+_.remove(users, { name: 'IDMASH' })
+console.log(users)
+*/
+/*
+import myData from './myData.json'
+
+console.log(myData)
+
+const user = {
+  name: 'Idmash',
+  age: 85,
+  emails: [
+    'idmash88@gmail.com',
+    'mongareye@gmail.com'
+  ]
+}
+console.log('user', user)
+
+const str = JSON.stringify(user)
+console.log('str', str)
+console.log(typeof str)
+
+const obj = JSON.parse(str)
+console.log('obj', obj)
+*/
+/*
+const user = {
+  name: 'Idmash',
+  age: 85,
+  emails: [
+    'idmash88@gmail.com',
+    'mongareye@gmail.com'
+  ]
+}
+
+const str = localStorage.getItem('user')
+const obj = JSON.parse(str)
+obj.age = 22
+console.log(obj)
+
+localStorage.setItem('user', JSON.stringify(obj))
+//console.log(JSON.parse(localStorage.getItem('user')))
+//localStorage.removeItem('user')
+*/
+
+import axios from 'axios'
+
+function fetchMovies() {
+  axios
+  .get('https://www.omdbapi.com/?apikey=7035c60c&s=frozen')
+  .then(res => {
+    console.log(res)
+    const h1El = document.querySelector('h1')
+    const imgEl = document.querySelector('img')
+    h1El.textContent = res.data.Search[0].Title
+    imgEl.src = res.data.Search[0].Poster
+  })
+}
+fetchMovies()
+
+
+
+
+
+
